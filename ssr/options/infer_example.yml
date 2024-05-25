@@ -24,12 +24,6 @@ network_g:
   num_block: 23
   num_grow_ch: 32
 
-network_d:
-  type: SSR_UNetDiscriminatorSN
-  num_in_ch: 27  # RGB of Real/Fake image + [optional] old high-res image + [optional] low-res images
-  num_feat: 64
-  skip_connection: True
-
 # Load pretrained weights into the generator that is defined above
 path:
   pretrain_network_g: experiments/esrgan_8S2.pth
